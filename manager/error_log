@@ -1,0 +1,43 @@
+[01-Aug-2020 03:24:14 UTC] PHP Fatal error:  Uncaught Error: Class 'msqli' not found in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:29
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 29
+[01-Aug-2020 03:26:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'millet19 '@'localhost' (using password: YES) in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 34
+[01-Aug-2020 03:27:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 45
+[01-Aug-2020 03:33:58 UTC] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 53
+[01-Aug-2020 03:34:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 45
+[01-Aug-2020 03:35:15 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 45
+[01-Aug-2020 03:39:15 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 45
+[01-Aug-2020 03:39:44 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 48
+[01-Aug-2020 03:40:33 UTC] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:53
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 53
+[01-Aug-2020 03:43:40 UTC] PHP Fatal error:  Uncaught Error: Call to a member function query() on string in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:46
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 46
+[01-Aug-2020 03:47:42 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19'@'localhost' to database 'productinfo' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:48:44 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19'@'localhost' to database 'productinfo' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:51:16 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19'@'localhost' to database 'productinfo' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:54:03 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'test'@'localhost' (using password: YES) in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:55:15 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19_test'@'localhost' to database 'productinfo' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:57:23 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19_admin'@'localhost' to database 'products' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:57:54 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'millet19_admin'@'localhost' to database 'products' in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 03:58:52 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 35
+[01-Aug-2020 04:02:12 UTC] PHP Fatal error:  Uncaught Error: Call to a member function close() on null in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/millet19/public_html/Isopod-Ecommerce/manager/insertproduct.php on line 54

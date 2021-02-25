@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+?>
+
+<?php
+if (isset($_SESSION['UserUsername'])) {
+?> <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Isopod Galore</title> 
@@ -180,11 +186,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-     <a class="navbar-brand" href="mainsite.html">Isopod Galore</a>
+     <a class="navbar-brand" href="../../index.php">Isopod Galore</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-           <li><a href="mainsite.html">All Items</a></li>
+           <li><a href="../../index.php">All Items</a></li>
         <li><a href="apparel.php">Apparel</a></li>
         <li><a href="homedecor.php">Home Decor</a></li>
         <li><a href="plushies.php">Plushies</a></li>
@@ -216,12 +222,12 @@
     $servername = "localhost";
     $username = "millet19_admin";
     $password = "IsopodAdmin";
-    $dname = "millet19_products";
+    $dname = "millet19_Isopod-Ecommerce";
 
 
     $conn = new mysqli($servername, $username, $password, $dname);
     
-   $sql = "select * from productinfo where category='Accessories'";
+  $sql = "select * from productinfo where category='Accessories'";
     $result = $conn->query($sql);
     
     $num_results = $result->num_rows;
@@ -239,6 +245,10 @@
       echo "<br />Category: ";
       echo stripslashes($row['category']);
      echo "</p>";
+       //HTML IN PHP
+     echo "<form action='cart.php' method='post'>
+    <input type='submit' name='addtocart' value='Add to Cart' /> </form>";
+     echo "</p>";
   }
     $conn->close();
     ?>
@@ -251,4 +261,11 @@
 
 
 </body>
-</html>
+</html><?php;
+}
+else{
+    echo 'You are not logged in.<br />';
+}
+?> 
+
+

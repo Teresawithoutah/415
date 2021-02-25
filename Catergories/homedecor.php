@@ -1,18 +1,13 @@
-<?php
+<?php 
 session_start();
-
 ?>
 
-
 <?php
-
-
-//&& $_SESSION['UserUsername'])
 if (isset($_SESSION['UserUsername'])) {
-    ?> <!DOCTYPE html>
-    <html lang="en">
+?> <!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Isopod Galore</title>
+  <title>Isopod Galore</title> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -25,7 +20,6 @@ if (isset($_SESSION['UserUsername'])) {
     font: 400 15px Lato, sans-serif;
     line-height: 1.2;
     color: #818181;
-    display: ;
   }
   h2 {
     font-size: 24px;
@@ -56,8 +50,8 @@ if (isset($_SESSION['UserUsername'])) {
     color: #303030;
     font-weight: 400;
     margin-bottom: 30px;
-  }
-
+  }  
+  
   .container-fluid {
     padding: 60px 50px;
   }
@@ -103,7 +97,7 @@ if (isset($_SESSION['UserUsername'])) {
     font-style: normal;
   }
   .panel {
-    border: 1px solid #f4511e;
+    border: 1px solid #f4511e; 
     border-radius:0 !important;
     transition: box-shadow 0.5s;
   }
@@ -125,7 +119,7 @@ if (isset($_SESSION['UserUsername'])) {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-
+ 
 
   .navbar {
     margin-bottom: 0;
@@ -149,7 +143,7 @@ if (isset($_SESSION['UserUsername'])) {
     border-color: transparent;
     color: #fff !important;
   }
-
+ 
 
   @media screen and (max-width: 768px) {
     .col-sm-4 {
@@ -166,13 +160,13 @@ if (isset($_SESSION['UserUsername'])) {
       font-size: 150px;
     }
   }
-
+  
   .parallax {
   /* The image used */
-  background-image: url("Isopod-Ecommerce/img/isopod2.jpg");
+  background-image: url("img/isopod2.jpg");
     opacity: 0.8;
   /* Set a specific height */
-  min-height: 650px;
+  min-height: 650px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -182,7 +176,6 @@ if (isset($_SESSION['UserUsername'])) {
 }
   </style>
 </head>
-
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -191,45 +184,28 @@ if (isset($_SESSION['UserUsername'])) {
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="index.php">Isopod Galore</a>
+     <a class="navbar-brand" href="../../index.php">Isopod Galore</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-           <li><a href="index.php">All Items</a></li>
-        <li><a href="Isopod-Ecommerce/Catergories/apparel.php">Apparel</a></li>
-        <li><a href="Isopod-Ecommerce/Catergories/homedecor.php">Home Decor</a></li>
-        <li><a href="Isopod-Ecommerce/Catergories/plushies.php">Plushies</a></li>
-        <li><a href="Isopod-Ecommerce/Catergories/accessories.php">Accessories</a></li>
-        <li><a href="Isopod-Ecommerce/Catergories/pets.php">Pet Crustaceans</a></li>
-
-      </ul>
+           <li><a href="../../index.php">All Items</a></li>
+        <li><a href="apparel.php">Apparel</a></li>
+        <li><a href="homedecor.php">Home Decor</a></li>
+        <li><a href="plushies.php">Plushies</a></li>
+        <li><a href="accessories.php">Accessories</a></li>
+        <li><a href="pets.php">Pet Crustaceans</a></li>
+       </ul>
        <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
         </button>
-
+        
+    
     </div>
   </div>
 </nav>
 
-
-   <div class="parallax">
-  <p class="company">Isopod Galore</p> <br><br>
-  <p class= "company2">We specialize in developing a centralized area and market to purchase Isopod related items and some real life crustaceans!</p>
-  <form>
-     </div>
-      <!--- NOT SURE ABOUT THIS // SUBSCRIBE SECTION
-    <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div>
-
-
-    </div>
-  </form>
-  -->
 
 
 
@@ -237,21 +213,47 @@ if (isset($_SESSION['UserUsername'])) {
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
   <div class="row">
-    <div class="col-sm-8">
-      <h2>About Us</h2><br>
+    <div class="col-sm-8"><br>
+    <br><br>
+      <h2>Home Decor</h2><br>
+     
+    
+    <?php
+    $servername = "localhost";
+    $username = "millet19_admin";
+    $password = "IsopodAdmin";
+    $dname = "millet19_Isopod-Ecommerce";
 
-      <h4>We are dedicated to supporting those who love Isopods and desired a place to find all types of items that were designed with an isopod theme.<br> Isopods are any member of the order Isopoda (class Crustacea), which is a group of diverse, widely occurring forms including marine, freshwater, and terrestrial species. <br> <br>Find all your needs here, enjoy shopping! </h4>
 
-      <h3> Search for items here</h3>
-       <form action="results.php" method="post">
-            <input name="searchterm" type="text" size="40">
-            <input type="submit" name="submit" value="Search">
-        </form>
+    $conn = new mysqli($servername, $username, $password, $dname);
+    
+  $sql = "select * from productinfo where category='Homedecor'";
+    $result = $conn->query($sql);
+    
+    $num_results = $result->num_rows;
 
+  for ($i=0; $i <$num_results; $i++) {
+     $row = $result->fetch_assoc();
+     echo "<p><strong>".($i+1).". Product Name: ";
+     echo htmlspecialchars(stripslashes($row['productname']));
+     echo "</strong><br />Product ID: ";
+     echo stripslashes($row['productid']);
+     echo "<br />Picture: ";
+     echo stripslashes($row['picture']);
+     echo "<br />Price: ";
+     echo stripslashes($row['price']);
+      echo "<br />Category: ";
+      echo stripslashes($row['category']);
+     echo "</p>";
+       //HTML IN PHP
+     echo "<form action='cart.php' method='post'>
+    <input type='submit' name='addtocart' value='Add to Cart' /> </form>";
+     echo "</p>";
+  }
+    $conn->close();
+    ?>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-map-marker logo"></span>
-    </div>
+    
   </div>
 </div>
 </div>
@@ -259,70 +261,11 @@ if (isset($_SESSION['UserUsername'])) {
 
 
 </body>
-</html><?php ;
-
+</html><?php;
 }
 else{
-?> <!doctype html>
-
-<head>
-
-    <!-- Basics -->
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-    <title>Login</title>
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="login.css">
-
-
-</head>
-<body>
-
-    <!-- Begin Page Content -->
-
-    <div id="container">
-
-        <form method="post" action="login.php">
-
-            <label for="username">Username:</label>
-
-            <input type="text" name="UserUsername">
-        <input type="hidden" name="EmployeeUsername">
-
-            <label for="password">Password:</label>
-
-
-            <input type="hidden" name="EmployeePw">
-
-            <input type="password" name="UserPw">
-
-            <div id="lower">
-
-             <a href="Isopod-Ecommerce/signup.html"> <input type="button" value="Customer Signup"></a>
-
-                <input type="submit" value="Login">
-
-      <a href="Isopod-Ecommerce/manager/adminsignup.html"> <input type="button" value="Admin Signup"></a>
-            </div><!--/ lower-->
-
-        </form>
-
-
-
-    </div><!--/ container-->
-
-
-
-    <!-- End Page Content -->
-
-</body>
-
-</html><?php
+    echo 'You are not logged in.<br />';
 }
+?> 
 
 
-?>

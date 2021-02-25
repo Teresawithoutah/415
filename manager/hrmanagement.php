@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+?>
+
+<?php
+if (isset($_SESSION['EmployeeUsername'])) {
+?> <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Isopod Galore</title> 
@@ -180,11 +186,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-     <a class="navbar-brand" href="mainsite.html">Isopod Galore</a>
+     <a class="navbar-brand" href="../../index.php">Isopod Galore</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-           <li><a href="mainsite.html">All Items</a></li>
+           <li><a href="../../index.php">All Items</a></li>
         <li><a href="apparel.php">Apparel</a></li>
         <li><a href="homedecor.php">Home Decor</a></li>
         <li><a href="plushies.php">Plushies</a></li>
@@ -209,46 +215,53 @@
   <div class="row">
     <div class="col-sm-8"><br>
     <br><br>
-      <h2>Plushies</h2><br>
+      <h2>Employee HR Tracking Management View</h2><br>
      
     
     <?php
     $servername = "localhost";
     $username = "millet19_admin";
     $password = "IsopodAdmin";
-    $dname = "millet19_products";
+    $dname = "millet19_Isopod-Ecommerce";
 
 
     $conn = new mysqli($servername, $username, $password, $dname);
     
-  $sql = "select * from productinfo where category='Plushies'";
+  $sql = "select * from employee";
     $result = $conn->query($sql);
     
     $num_results = $result->num_rows;
 
   for ($i=0; $i <$num_results; $i++) {
      $row = $result->fetch_assoc();
-     echo "<p><strong>".($i+1).". Product Name: ";
-     echo htmlspecialchars(stripslashes($row['productname']));
-     echo "</strong><br />Product ID: ";
-     echo stripslashes($row['productid']);
-     echo "<br />Picture: ";
-     echo stripslashes($row['picture']);
-     echo "<br />Price: ";
-     echo stripslashes($row['price']);
-      echo "<br />Category: ";
-      echo stripslashes($row['category']);
+     echo "<p><strong>".($i+1).". Employee Username: ";
+     echo htmlspecialchars(stripslashes($row['EmployeeUsername']));
+     echo "</strong><br />Employee Email: ";
+     echo stripslashes($row['EmployeeEmail']);
+     echo "<br />EmployeePw: ";
+     echo stripslashes($row['EmployeePw']);
+ 
+      
      echo "</p>";
+  
   }
     $conn->close();
     ?>
     </div>
     
   </div>
+  
+  <h3><a href="adminindex.php">back</a></h3>
 </div>
 </div>
-
 
 
 </body>
-</html>
+</html><?php;
+}
+else{
+    echo 'You are not logged in.<br />';
+}
+?> 
+
+

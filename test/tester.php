@@ -1,3 +1,17 @@
+
+<?php 
+session_start();
+?>
+
+<?php
+//&& $_SESSION['UserUsername'])
+if (isset($_SESSION['UserUsername'])) {
+    echo'hi';
+}else{
+    echo 'You are not logged in.<br />';
+}
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -190,7 +204,8 @@
         <li><a href="plushies.php">Plushies</a></li>
         <li><a href="accessories.php">Accessories</a></li>
         <li><a href="pets.php">Pet Crustaceans</a></li>
-       </ul>
+       
+      </ul>
        <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
         </button>
@@ -209,24 +224,24 @@
   <div class="row">
     <div class="col-sm-8"><br>
     <br><br>
-      <h2>Pets</h2><br>
+      <h2>Accessories</h2><br>
      
     
-    <?php
+<?php
     $servername = "localhost";
     $username = "millet19_admin";
     $password = "IsopodAdmin";
-    $dname = "millet19_products";
+    $dname = "millet19_Isopod-Ecommerce";
 
 
     $conn = new mysqli($servername, $username, $password, $dname);
     
-   $sql = "select * from productinfo where category='Pets'";
+    $sql = "select * from productinfo where category='Accessories'";
     $result = $conn->query($sql);
     
     $num_results = $result->num_rows;
 
-  for ($i=0; $i <$num_results; $i++) {
+     for ($i=0; $i <$num_results; $i++) {
      $row = $result->fetch_assoc();
      echo "<p><strong>".($i+1).". Product Name: ";
      echo htmlspecialchars(stripslashes($row['productname']));
@@ -238,10 +253,17 @@
      echo stripslashes($row['price']);
       echo "<br />Category: ";
       echo stripslashes($row['category']);
+   //HTML IN PHP
+     echo "<form action='cart.php' method='post'>
+    <input type='submit' name='addtocart' value='Add to Cart' /> </form>";
      echo "</p>";
+   
   }
     $conn->close();
+   
+   
     ?>
+    
     </div>
     
   </div>

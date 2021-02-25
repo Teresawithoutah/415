@@ -4,10 +4,10 @@
 ?>
 <html>
 <head>
-  <title>Bob's Auto Parts - Customer Orders</title>
+  <title>Isopod Galore - Customer Orders</title>
 </head>
 <body>
-<h1>Bob's Auto Parts</h1>
+<h1>Isopod Galore</h1>
 <h2>Customer Orders</h2>
 <?php
 

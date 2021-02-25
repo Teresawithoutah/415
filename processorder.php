@@ -9,10 +9,10 @@
 ?>
 <html>
 <head>
-  <title>Bob's Auto Parts - Order Results</title>
+  <title>Isopod Galore - Order Results</title>
 </head>
 <body>
-<h1>Bob's Auto Parts</h1>
+<h1>Isopod Galore</h1>
 <h2>Order Results</h2>
 <?php
 
@@ -31,14 +31,16 @@
 
 	} else {
 
+
+///FIRSTN INPUT
 	  if ($tireqty > 0) {
 		echo $tireqty." tires<br />";
 	  }
-
+///SECOND INPUT
 	  if ($oilqty > 0) {
-		echo $oilqty." bottles of oil<br />";
+		echo $oilqty." APP<br />";
 	  }
-
+//THIRD INPUT 
 	  if ($sparkqty > 0) {
 		echo $sparkqty." spark plugs<br />";
 	  }
@@ -59,7 +61,7 @@
 
 	echo "<p>Total of order is $".$totalamount."</p>";
 	echo "<p>Address to ship to is ".$address."</p>";
-
+//CHANGE NAMES
 	$outputstring = $date."\t".$tireqty." tires \t".$oilqty." oil\t"
 					.$sparkqty." spark plugs\t\$".$totalamount
 					."\t". $address."\n";
@@ -67,7 +69,7 @@
 
 
 	// open file for appending
-	@ $fp = fopen("$DOCUMENT_ROOT/../orders/orders.txt", 'ab');
+	@ $fp = fopen("/home/millet19/data/isopod/orders.txt", 'ab');
 
 	flock($fp, LOCK_EX);
 

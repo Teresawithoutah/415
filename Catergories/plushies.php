@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php 
+session_start();
+?>
+
+<?php
+if (isset($_SESSION['UserUsername'])) {
+?> <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Isopod Galore</title> 
@@ -180,18 +186,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-     <a class="navbar-brand" href="mainsite.html">Isopod Galore</a>
+     <a class="navbar-brand" href="../../index.php">Isopod Galore</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-           <li><a href="mainsite.html">All Items</a></li>
+           <li><a href="../../index.php">All Items</a></li>
         <li><a href="apparel.php">Apparel</a></li>
         <li><a href="homedecor.php">Home Decor</a></li>
         <li><a href="plushies.php">Plushies</a></li>
         <li><a href="accessories.php">Accessories</a></li>
         <li><a href="pets.php">Pet Crustaceans</a></li>
-       
-      </ul>
+       </ul>
        <button type="button" class="btn btn-default btn-sm">
           <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
         </button>
@@ -210,19 +215,19 @@
   <div class="row">
     <div class="col-sm-8"><br>
     <br><br>
-      <h2>Apparel</h2><br>
+      <h2>Plushies</h2><br>
      
     
     <?php
     $servername = "localhost";
     $username = "millet19_admin";
     $password = "IsopodAdmin";
-    $dname = "millet19_products";
+    $dname = "millet19_Isopod-Ecommerce";
 
 
     $conn = new mysqli($servername, $username, $password, $dname);
     
-    $sql = "select * from productinfo where category='Apparel'";
+  $sql = "select * from productinfo where category='Plushies'";
     $result = $conn->query($sql);
     
     $num_results = $result->num_rows;
@@ -239,7 +244,11 @@
      echo stripslashes($row['price']);
       echo "<br />Category: ";
       echo stripslashes($row['category']);
+        //HTML IN PHP
+     echo "<form action='cart.php' method='post'>
+    <input type='submit' name='addtocart' value='Add to Cart' /> </form>";
      echo "</p>";
+   
   }
     $conn->close();
     ?>
@@ -252,4 +261,11 @@
 
 
 </body>
-</html>
+</html><?php;
+}
+else{
+    echo 'You are not logged in.<br />';
+}
+?> 
+
+
